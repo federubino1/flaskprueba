@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap');
+
+body {
+    height: 100vh;
+    width:100%;
+    margin: 0;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, transparent 34.15%, #EB57E3 33.33%, #B532EB 66.66%, transparent 66.66%), linear-gradient(180deg, #8F5CE6, #B532EB);
+}
+
+#formulario {
+    position: absolute;
+    display: grid;
+    width: 25%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 2rem;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.label {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 22px;
+    left: 5px;
+    pointer-events: none;
+}
+
+#iniciar_sesion {
+    text-align: center;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    border: none;
+    position: relative;
+    width: 100px;
+    height: 25px;
+    position: sticky;
+    font-family: 'Poppins', sans-serif;
+    align-self: flex-end;
+}
+
+
+.ingreso {
+    position: relative;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.082);
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px; /* Ajusta el relleno según tus preferencias */
+    border-bottom: 2px solid #545C61; /* Línea base inicial */
+    transition: border-bottom-color 0.3s; /* Animación de transición */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ingreso:focus + .label,
+.ingreso:valid + .label {
+    transition: 0.2s ease-in-out;
+    transform: translate(-10%, -100%) scale(80%)
+    
+}
+
+.ingreso:not(:focus):not(:valid) + .label {
+    transition: 0.2s ease-in-out;
+    transform: translateY(0);
+  }
+
+.ingreso:hover {
+    border-bottom-color: #007bff; /* Color de la línea al enfocar el input */
+}   
+
+#iniciar_sesion:active {
+    border: 1px solid #ececec; /* Color de la línea al enfocar el input */
+}   
+
+.input_container {
+    position: relative;
+}
+
